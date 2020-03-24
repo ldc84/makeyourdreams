@@ -1,4 +1,4 @@
-# gulp4.0-test
+# gulp4.0 task
 This provides an example Gulp.js project which automates CSS tasks including:
 
 * optimizing images
@@ -17,13 +17,13 @@ This provides an example Gulp.js project which automates CSS tasks including:
 To install on any Linux, Mac OS or Windows system, ensure [Node.js](https://nodejs.org/) is installed then clone the repository:
 
 ```bash
-git clone https://github.com/ldc84/gulp4.0-test.git
+git clone https://github.com/ldc84/makeyourdreams.git
 ```
 
 Navigate to the folder:
 
 ```bash
-cd gulp4.0-test
+cd makeyourdreams
 ```
 
 Install dependencies:
