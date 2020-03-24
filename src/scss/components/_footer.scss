@@ -1,0 +1,86 @@
+// page footer
+footer {
+  height:218px;
+  background-color:#11202e;
+  > .container {
+    padding:75px 0 0 345px;
+    .foot-logo {
+      position:absolute;
+      top:79px;
+      left:20px;
+      display:block;
+      width:267px;
+      height:61px;
+      background:url("../images/foot_logo.png") no-repeat center center;
+      background-size:contain;
+      @include fontNone;
+    }
+    > div > div {
+      color:#6f7d8a;
+      font-size:rem(14);
+      line-height:24px;
+      address {
+        display: inline;
+        color:#6f7d8a;
+        font-size:rem(14);
+        font-style:normal;
+      }
+      address + span,
+      span + span {
+        position:relative;
+        margin-left:4px;
+        padding-left:10px;
+        &:before {
+          content:'';
+          display:block;
+          position:absolute;
+          top:3px;
+          left:0;
+          width:1px;
+          height:16px;
+          background-color:#6f7d8a;
+        }
+      }
+      &.copy {
+        font-weight:300;
+      }
+    }
+  }
+
+  // mobile
+  @include mediaQuery($deviceSmall){
+    height:150px;
+    > .container {
+      padding:32px 0 0 28px;
+      .foot-logo {
+        position: static;
+        width:134px;
+        height:31px;
+        margin-bottom:10px;
+        background-size:contain;
+      }
+      > div > div {
+        color:#6f7d8a;
+        font-size:rem(9);
+        line-height:1.4;
+        address {
+          display: inline;
+          color:#6f7d8a;
+          font-size:rem(9);
+          font-style:normal;
+        }
+        address + span,
+        span + span {
+          position:relative;
+          margin-left:8px;
+          padding-left:9px;
+          &:before {
+            content:'';
+            top:5px;
+            height:6px;
+          }
+        }
+      }
+    }
+  }
+}
