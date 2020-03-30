@@ -1,3 +1,24 @@
+// header
+(function ($) {
+
+  $(function () {
+    var win = $(window);
+    var header = $('#header');
+
+    // scroll
+    win.on('scroll load', function(){
+      var top = win.scrollTop();
+      if(top > 30){
+        header.addClass('h-active');
+      }else {
+        header.removeClass('h-active');
+      }
+    });
+
+  });
+
+})(jQuery);
+
 // mobile menu
 (function ($) {
 

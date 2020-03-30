@@ -9,11 +9,13 @@ header {
   border-bottom:1px solid #ddd;
   background-color:#fff;
   z-index:10;
+  transition:all .3s ease-in-out;
   h1 {
     position:absolute;
     top:19px;
     left:32px;
     z-index: 2;
+    transition:all .3s ease-in-out;
     a {
       display:block;
       width:269px;
@@ -21,6 +23,7 @@ header {
       background:url("../images/logo.png") no-repeat center center;
       background-size:contain;
       @include fontNone;
+      transition:all .3s ease-in-out;
     }
   }
   .m-title,
@@ -42,11 +45,32 @@ header {
           padding:0 19px;
           line-height:103px;
           font-size:rem(18);
+          transition:all .3s ease-in-out;
         }
         &.active {
           a {
             color:$color-point;
             font-weight:700;
+          }
+        }
+      }
+    }
+  }
+
+  // h-active
+  &.h-active {
+    height:60px;
+    h1 {
+      top:8px;
+      a {
+        height:40px;
+      }
+    }
+    #gnb {
+      ul {
+        li {
+          a {
+            line-height:60px;
           }
         }
       }

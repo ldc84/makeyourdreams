@@ -209,9 +209,11 @@
 // subject
 #subject {
   .subject-list {
-    display:flex;
-    flex-wrap:wrap;
+    // display:flex;
+    // flex-wrap:wrap;
+    overflow: hidden;
     > li {
+      float:left;
       display:flex;
       align-items: flex-start;
       width:50%;
@@ -219,7 +221,7 @@
       .text-area {
         padding-left:30px;
         .tit {
-          padding-bottom:10px;
+          padding-bottom:7px;
           color:$color-point;
           font-size:rem(27);
           font-weight:700;
@@ -227,12 +229,12 @@
         }
         > ul {
           > li {
-            margin-top:10px;
+            margin-top:8px;
             color:$color-text;
             font-size:rem(16);
             font-weight:700;
             ul {
-              padding-top:5px;
+              padding-top:3px;
               li {
                 line-height:1.6;
               }
@@ -243,6 +245,7 @@
 
       &:last-child {
         flex:1;
+        width:100%;
         .text-area {
           display:flex;
           flex-wrap:wrap;
@@ -435,6 +438,9 @@
         padding:30px 0 0 0;
         border-top:1px solid #ebebeb;
         @include fontNone;
+         * {
+          text-indent: 0;
+        }
         .tit {
           color:$color-point;
           font-size:rem(27);

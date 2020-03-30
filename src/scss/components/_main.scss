@@ -314,6 +314,14 @@
     
   }
 
+  // footer
+  [data-section-name='footer'] {
+    .container {
+      padding-top:75px;
+    }
+  }
+
+
   // mobile
   @include mediaQuery($deviceSmall){
     margin:-52px 0 -60px;
@@ -561,6 +569,14 @@
       }
       
     }
+
+    // footer
+    [data-section-name='footer'] {
+      .container {
+        padding-top:32px;
+      }
+    }
+
   }
 
 }
