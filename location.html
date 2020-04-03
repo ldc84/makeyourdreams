@@ -20,7 +20,7 @@
   <meta property="og:url" content="">
 
   <!-- <link rel="icon" type="image/png" href="/favicon.png"> -->
-  <link rel="stylesheet" href="./css/style.css?t=1585548759849">
+  <link rel="stylesheet" href="./css/style.css?t=1585875696418">
 
 </head>
 
@@ -49,9 +49,9 @@
             <li><a href="./infra.html">의원시설</a></li>
             <li><a href="./location.html">오시는길</a></li>
           </ul>
-          <a href="" class="m-close">
+          <!-- <a href="" class="m-close">
             <span>메뉴 닫힘</span>
-          </a>
+          </a> -->
         </nav>
       </div>
     </header>
@@ -75,7 +75,7 @@
   <div class="container">
     <h3 class="title-type-1 loca-st">두드림 정신건강의학과 <strong>오시는 길</strong></h3>
     <div class="location-info">
-      <div class="map"><img src="./images/location_img01.jpg" alt=""></div>
+      <div class="map" id="map"></div>
       <ul class="info">
         <li>
           <p class="tit">
@@ -191,10 +191,33 @@
     </p>
   </div>
 </div>
+<script src="//dapi.kakao.com/v2/maps/sdk.js?appkey=0d819888b8b4cd1f8d69b65f392a9022"></script>
 <script>
   window.addEventListener('load', function(){
     // 현재 페이지 메뉴 활성화
     $('#gnb ul li').eq(3).addClass('active');
+
+    var latlng = new kakao.maps.LatLng(35.888786, 128.5918927);
+
+    // 지도에 마커생성
+    var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
+        mapOption = { 
+          center: latlng, // 지도의 중심좌표
+          level: 3 // 지도의 확대 레벨
+        };
+
+    var map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
+
+    // 마커가 표시될 위치입니다 
+    var markerPosition  = latlng; 
+
+    // 마커를 생성합니다
+    var marker = new kakao.maps.Marker({
+      position: markerPosition
+    });
+
+    // 마커가 지도 위에 표시되도록 설정합니다
+    marker.setMap(map);
   });
 </script>
 
@@ -259,7 +282,7 @@
   <!-- //wrap -->
 
   <!-- jquery cdn -->
-  <script src="./js/ui_js.js?t=1585548759849"></script>
+  <script src="./js/ui_js.js?t=1585875696418"></script>
 </body>
 
 </html>

@@ -1072,6 +1072,9 @@ footer {
 #location .location-info {
   margin-top: 60px;
   padding-bottom: 100px; }
+  #location .location-info .map {
+    width: 100%;
+    height: 680px; }
   #location .location-info .info {
     display: flex;
     flex-wrap: wrap;
@@ -1349,7 +1352,6 @@ footer {
     display: flex;
     width: 100%;
     height: 100%;
-    border-top: 1px solid #ebebeb;
     border-bottom: 1px solid #ebebeb;
     border-right: 1px solid #ebebeb; }
     #main [data-section-name='subject'] .subject-guide > li {
@@ -1497,7 +1499,9 @@ footer {
                 background-color: #696969;
                 transform: translateY(-50%); }
     #main [data-section-name='location'] .main-loca .map {
-      width: 668px; }
+      width: 668px;
+      height: 462px;
+      border: 1px solid #ddd; }
   #main [data-section-name='footer'] .container {
     padding-top: 75px; }
   @media only screen and (max-width: 767px) {
@@ -1527,26 +1531,26 @@ footer {
             font-size: 1.625rem; }
           #main [data-section-name='intro'] .text-box .text02 {
             margin-top: 10px;
-            padding: 0 12%;
-            font-size: 0.688rem; }
+            padding: 0 8%;
+            font-size: 0.75rem; }
             #main [data-section-name='intro'] .text-box .text02 br {
               display: none; }
             #main [data-section-name='intro'] .text-box .text02 strong {
               text-decoration: none; }
           #main [data-section-name='intro'] .text-box .tel {
-            margin-top: 20px; }
+            margin-top: 15px; }
             #main [data-section-name='intro'] .text-box .tel a {
-              width: 188px;
-              height: 44px;
-              line-height: 44px;
-              padding: 0 0 0 33px;
-              font-size: 0.812rem;
-              background-position-x: 9px;
+              width: 218px;
+              height: 55px;
+              line-height: 55px;
+              padding: 0 0 0 42px;
+              font-size: 0.938rem;
+              background-position-x: 17px;
               background-size: 17px auto;
               text-align: left; }
               #main [data-section-name='intro'] .text-box .tel a strong {
-                margin-left: 1px;
-                padding-left: 5px; }
+                margin-left: 2px;
+                padding-left: 6px; }
                 #main [data-section-name='intro'] .text-box .tel a strong:before {
                   height: 10px; }
         #main [data-section-name='intro'] .arrow {
@@ -1558,36 +1562,46 @@ footer {
       #main [data-section-name='subject'] .subject-guide {
         flex-wrap: wrap;
         height: auto;
-        padding: 20px 13px 0 13px;
+        padding: 15px 13px 0 13px;
         border: none; }
         #main [data-section-name='subject'] .subject-guide > li {
           flex: inherit;
-          width: 50%;
+          align-items: flex-start;
+          position: relative;
+          width: 100%;
           height: auto;
-          padding: 25px 0;
+          padding: 25px 0 25px 49%;
           border-left: none;
-          border-right: 1px solid #ebebeb;
-          border-bottom: 1px solid #ebebeb; }
+          border-top: 1px solid #ebebeb;
+          text-align: left; }
+          #main [data-section-name='subject'] .subject-guide > li:first-child {
+            border-top: none; }
           #main [data-section-name='subject'] .subject-guide > li:nth-child(2) {
-            border-right: none; }
-          #main [data-section-name='subject'] .subject-guide > li:nth-child(3) {
-            border-bottom: none; }
-          #main [data-section-name='subject'] .subject-guide > li .image img {
-            width: 55px; }
+            order: 1; }
+          #main [data-section-name='subject'] .subject-guide > li .image {
+            position: absolute;
+            top: 25px;
+            left: 50%;
+            margin-left: -84px; }
+            #main [data-section-name='subject'] .subject-guide > li .image img {
+              width: 55px; }
           #main [data-section-name='subject'] .subject-guide > li .tit {
-            margin-top: 8px;
-            font-size: 0.625rem; }
+            margin-top: 0;
+            font-size: 0.75rem; }
           #main [data-section-name='subject'] .subject-guide > li ul {
-            height: 74px;
+            height: auto;
             margin-top: 6px;
-            text-align: center; }
+            text-align: left; }
             #main [data-section-name='subject'] .subject-guide > li ul li {
-              font-size: 0.562rem;
+              font-size: 0.625rem;
               line-height: 1.4; }
-          #main [data-section-name='subject'] .subject-guide > li .more a {
-            padding-left: 11px;
-            font-size: 0.5rem;
-            background-size: 8px auto; }
+          #main [data-section-name='subject'] .subject-guide > li .more {
+            margin-top: 8px; }
+            #main [data-section-name='subject'] .subject-guide > li .more a {
+              padding-left: 11px;
+              font-size: 0.5rem;
+              background-size: 8px auto;
+              vertical-align: top; }
       #main [data-section-name='infra'] {
         background-image: url("../images/main_m_bg02.jpg"); }
         #main [data-section-name='infra'] .container .main-title-1 {
@@ -1597,13 +1611,14 @@ footer {
         #main [data-section-name='infra'] .text-box {
           align-items: center; }
         #main [data-section-name='infra'] .text01 {
-          margin-top: 10px;
+          margin-top: 6px;
           color: #fff;
           font-size: 0.625rem;
           font-weight: 500;
+          line-height: 1.5;
           text-align: center; }
           #main [data-section-name='infra'] .text01.type02 {
-            margin-top: 32px; }
+            margin-top: 35px; }
         #main [data-section-name='infra'] .guide-box {
           width: 100%;
           height: 184px;
@@ -1613,18 +1628,18 @@ footer {
             flex: 1;
             display: flex;
             width: 100%;
-            padding: 25px 0 0 0; }
+            padding: 23px 0 0 0; }
             #main [data-section-name='infra'] .guide-box .use-time .tit {
               display: none; }
             #main [data-section-name='infra'] .guide-box .use-time .time-list {
               height: auto;
-              padding-left: 7%;
+              padding-left: 9%;
               border-left: none; }
               #main [data-section-name='infra'] .guide-box .use-time .time-list li {
                 margin-bottom: 6px;
-                font-size: 0.562rem; }
+                font-size: 0.75rem; }
                 #main [data-section-name='infra'] .guide-box .use-time .time-list li span {
-                  width: 42px;
+                  width: 55px;
                   word-spacing: 2px; }
               #main [data-section-name='infra'] .guide-box .use-time .time-list p {
                 font-size: 0.5rem;
@@ -1667,9 +1682,8 @@ footer {
                   height: 9px; }
         #main [data-section-name='location'] .main-loca .map {
           width: 100%;
+          height: 224px;
           margin-top: 20px; }
-          #main [data-section-name='location'] .main-loca .map img {
-            width: 100%; }
       #main [data-section-name='footer'] .container {
         padding-top: 32px; } }
 

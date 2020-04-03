@@ -20,7 +20,7 @@
   <meta property="og:url" content="">
 
   <!-- <link rel="icon" type="image/png" href="/favicon.png"> -->
-  <link rel="stylesheet" href="./css/style.css?t=1585548759836">
+  <link rel="stylesheet" href="./css/style.css?t=1585875696402">
 
 </head>
 
@@ -49,9 +49,9 @@
             <li><a href="./infra.html">의원시설</a></li>
             <li><a href="./location.html">오시는길</a></li>
           </ul>
-          <a href="" class="m-close">
+          <!-- <a href="" class="m-close">
             <span>메뉴 닫힘</span>
-          </a>
+          </a> -->
         </nav>
       </div>
     </header>
@@ -169,7 +169,7 @@
                 <li><span>토 요 일</span> 09:30  ~  14:00</li>
                 <li class="lunch"><span>점심시간</span> 13:00  ~  14:30</li>
               </ul>
-              <p>※ 수요일, 토요일은 점심시간 없이 진료합니다.</p>
+              <p class="only-pc">※ 수요일, 토요일은 점심시간 없이 진료합니다.</p>
             </div>
           </div>
           <p class="image"></p>
@@ -212,9 +212,7 @@
               </li>
             </ul>
           </div>
-          <div class="map">
-            <img src="./images/main_img_map.jpg" alt="">
-          </div>
+          <div class="map" id="map"></div>
         </div>
       </div>
     </div>
@@ -228,6 +226,7 @@
   <!-- //footer -->
 </div>
 
+<script src="//dapi.kakao.com/v2/maps/sdk.js?appkey=0d819888b8b4cd1f8d69b65f392a9022"></script>
 <script>
   window.addEventListener('load', function(){
     $(function() {
@@ -265,6 +264,28 @@
         return false
       })
     });
+
+    var latlng = new kakao.maps.LatLng(35.888786, 128.5918927);
+
+    // 지도에 마커생성
+    var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
+        mapOption = { 
+          center: latlng, // 지도의 중심좌표
+          level: 3 // 지도의 확대 레벨
+        };
+
+    var map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
+
+    // 마커가 표시될 위치입니다 
+    var markerPosition  = latlng; 
+
+    // 마커를 생성합니다
+    var marker = new kakao.maps.Marker({
+      position: markerPosition
+    });
+
+    // 마커가 지도 위에 표시되도록 설정합니다
+    marker.setMap(map);
   });
 </script>
 
@@ -329,7 +350,7 @@
   <!-- //wrap -->
 
   <!-- jquery cdn -->
-  <script src="./js/ui_js.js?t=1585548759836"></script>
+  <script src="./js/ui_js.js?t=1585875696402"></script>
 </body>
 
 </html>
