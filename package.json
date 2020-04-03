@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "local": "gulp default",
-    "zip": "set NODE_ENV=production&&gulp zip",
-    "release": "set NODE_ENV=production&&gulp deploy",
+    "zip": "NODE_ENV=production gulp zip",
+    "release": "NODE_ENV=production gulp deploy",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

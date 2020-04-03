@@ -7,7 +7,7 @@
 
   .container {
     height:100%;
-    padding-top:105px;
+    padding-top:60px;
   }
 
   .main-title-1 {
@@ -121,7 +121,6 @@
       display:flex;
       width:100%;
       height:100%;
-      border-top:1px solid #ebebeb;
       border-bottom:1px solid #ebebeb;
       border-right:1px solid #ebebeb;
       > li {
@@ -309,6 +308,8 @@
       }
       .map {
         width:668px;
+        height:462px;
+        border:1px solid #ddd;
       }
     }
     
@@ -357,8 +358,8 @@
         }
         .text02 {
           margin-top:10px;
-          padding:0 12%;
-          font-size:rem(11);
+          padding:0 8%;
+          font-size:rem(12);
           br {
             display:none;
           }
@@ -367,19 +368,19 @@
           }
         }
         .tel {
-          margin-top:20px;
+          margin-top:15px;
           a {
-            width:188px;
-            height:44px;
-            line-height:44px;
-            padding:0 0 0 33px;
-            font-size:rem(13);
-            background-position-x:9px;
+            width:218px;
+            height:55px;
+            line-height:55px;
+            padding:0 0 0 42px;
+            font-size:rem(15);
+            background-position-x:17px;
             background-size:17px auto;
             text-align:left;
             strong {
-              margin-left:1px;
-              padding-left:5px;
+              margin-left:2px;
+              padding-left:6px;
               &:before {
                 height:10px;
               }
@@ -405,45 +406,53 @@
       .subject-guide {
         flex-wrap:wrap;
         height:auto;
-        padding:20px 13px 0 13px;
+        padding:15px 13px 0 13px;
         border:none;
         > li {
           flex:inherit;
-          width:50%;
+          align-items: flex-start;
+          position:relative;
+          width:100%;
           height:auto;
-          padding:25px 0;
+          padding:25px 0 25px 49%;
           border-left:none;
-          border-right:1px solid #ebebeb;
-          border-bottom:1px solid #ebebeb;
-          &:nth-child(2) {
-            border-right:none;
+          border-top:1px solid #ebebeb;
+          text-align:left;
+          &:first-child {
+            border-top:none;
           }
-          &:nth-child(3) {
-            border-bottom:none;
+          &:nth-child(2) {
+            order:1;
           }
           .image {
+            position:absolute;
+            top:25px;
+            left:50%;
+            margin-left:-84px;
             img {
               width:55px;
             }
           }
           .tit {
-            margin-top:8px;
-            font-size:rem(10);
+            margin-top:0;
+            font-size:rem(12);
           }
           ul {
-            height:74px;
+            height:auto;
             margin-top:6px;
-            text-align:center;
+            text-align:left;
             li {
-              font-size:rem(9);
+              font-size:rem(10);
               line-height:1.4;
             }
           }
           .more {
+            margin-top:8px;
             a {
               padding-left:11px;
               font-size:rem(8);
               background-size:8px auto;
+              vertical-align: top;
             }
           }
         }
@@ -464,13 +473,14 @@
         align-items: center;
       }
       .text01 {
-        margin-top:10px;
+        margin-top:6px;
         color:#fff;
         font-size:rem(10);
         font-weight:500;
+        line-height:1.5;
         text-align:center;
         &.type02 {
-          margin-top:32px;
+          margin-top:35px;
         }
       }
       .guide-box {
@@ -482,19 +492,19 @@
           flex:1;
           display:flex;
           width:100%;
-          padding:25px 0 0 0;
+          padding:23px 0 0 0;
           .tit {
             display:none;
           }
           .time-list {
             height:auto;
-            padding-left:7%;
+            padding-left:9%;
             border-left:none;
             li {
               margin-bottom:6px;
-              font-size:rem(9);
+              font-size:rem(12);
               span {
-                width:42px;
+                width:55px;
                 word-spacing: 2px;
               }
             }
@@ -561,10 +571,8 @@
         }
         .map {
           width:100%;
-          margin-top:20px;
-          img {
-            width:100%;
-          }
+          height:224px;
+          margin-top:20px;          
         }
       }
       

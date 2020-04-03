@@ -30,6 +30,7 @@
     sourcemaps    = devBuild ? require('gulp-sourcemaps') : null,
     browsersync   = devBuild ? require('browser-sync').create() : null;
 
+  console.log(process.env.NODE_ENV);
   console.log('Gulp', devBuild ? 'development' : 'production', 'build');
 
   /**************** clean task ****************/
@@ -95,7 +96,7 @@
   // remove unused selectors and minify production CSS
   if (!devBuild) {
     cssConfig.postCSS.push(
-      require('usedcss')({ html: ['index.html'] }),
+      // require('usedcss')({ html: ['index.html'] }),
       require('cssnano')
     );
   }
