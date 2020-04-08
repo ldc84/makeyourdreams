@@ -1,4 +1,4 @@
-# gulp4.0 task
+# 두드림 클리닉
 This provides an example Gulp.js project which automates CSS tasks including:
 
 * optimizing images
